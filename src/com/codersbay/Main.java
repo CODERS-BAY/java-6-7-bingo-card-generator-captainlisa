@@ -11,6 +11,16 @@ public class Main {
         int[][] bingo = new int[5][5];
 
         //filling up array with random numbers
+        fillArray(r, bingo);
+
+
+        // print out bingo card
+        System.out.println("BINGO!");
+        printBingo(bingo);
+
+    }
+
+    private static void fillArray(Random r, int[][] bingo) {
         for (int i = 0; i < bingo.length; i++) {
             int number;
             for (int k = 0; k < bingo[i].length; k++) {
@@ -25,15 +35,15 @@ public class Main {
                         number = r.nextInt(16);
                         number += i * 15;
                     }
+
                 }
 
                 bingo[i][k] = number;
             }
         }
+    }
 
-
-        // print out bingo card
-        System.out.println("BINGO!");
+    private static void printBingo(int[][] bingo) {
         for (int i = 0; i < bingo.length; i++) {
 
             for (int k = 0; k < bingo[i].length; k++) {
@@ -41,7 +51,6 @@ public class Main {
             }
             System.out.println();
         }
-
     }
 
 
