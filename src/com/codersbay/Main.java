@@ -35,9 +35,7 @@ public class Main {
                         number = r.nextInt(16);
                         number += i * 15;
                     }
-
                 }
-
                 bingo[i][k] = number;
             }
         }
@@ -45,9 +43,8 @@ public class Main {
 
     private static void printBingo(int[][] bingo) {
         for (int i = 0; i < bingo.length; i++) {
-
             for (int k = 0; k < bingo[i].length; k++) {
-                System.out.printf("%3d", bingo[i][k]);
+                System.out.printf("%3d", bingo[k][i]);
             }
             System.out.println();
         }
